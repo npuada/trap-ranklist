@@ -1,0 +1,12 @@
+<!doctype html>
+<title>DLSU ICPC TraP Ranklist</title>
+<ul>
+{% for student in ranklist %}
+	<li>
+		Name: {{ student[0] }}
+		Username: {{ student[1] }}
+		Solved: {{ student[2] }}
+		Submissions: {{ student[3] }}
+	</li>
+{% endfor %}
+</ul>
