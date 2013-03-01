@@ -6,7 +6,7 @@ def get_ranklist():
 	ranklist = []
 	for line in f:
 		tokens = line.split(' ')
-
+		tokens[1] = tokens[1].rstrip()
 		r = requests.get('http://uhunt.felix-halim.net/api/ranklist/'+ tokens[1] +'/0/0')
 		data = json.loads(r.text)
 		d = data[0]
